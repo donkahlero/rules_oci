@@ -175,7 +175,7 @@ _attrs = {
         default = "push.sh.tpl",
         allow_single_file = True,
     ),
-    "_runfiles": attr.label(default = "@bazel_tools//tools/bash/runfiles"),
+    "_runfiles": attr.label(default = "@rules_shell//tools/bash/runfiles"),
     "_windows_constraint": attr.label(default = "@platforms//os:windows"),
     "_jq": attr.label(
         default = "@jq_toolchains//:resolved_toolchain",
