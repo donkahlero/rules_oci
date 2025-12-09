@@ -230,6 +230,10 @@ def _impl(ctx):
     runfiles = runfiles.merge(crane.default.default_runfiles)
     runfiles = runfiles.merge(ctx.attr._runfiles.default_runfiles)
 
+    print(ctx.attr._runfiles)
+    print("-----")
+    print(ctx.attr._runfiles.default_runfiles)
+
     return DefaultInfo(executable = util.maybe_wrap_launcher_for_windows(ctx, executable), runfiles = runfiles)
 
 oci_push_lib = struct(
